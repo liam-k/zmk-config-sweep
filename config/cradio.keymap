@@ -245,7 +245,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             bindings = <
 &kp K    &kp KP_DOT  &kp O       &kp KP_COMMA    &kp Y        &kp V  &kp G       &kp C       &kp L       &z_eszett
 &lt 1 H  &hm LCTL A  &hm LALT E  &hm LGUI I      &kp U        &kp D  &hm RGUI T  &hm RALT R  &hm RCTL N  &kp S
-&lt 3 X  &kp Q       &de_ae      &de_ue          &de_oe       &kp B  &kp P       &kp W       &kp M       &hs RSHIFT J
+&lt 3 X  &kp Q       &kp A       &kp U           &kp O        &kp B  &kp P       &kp W       &kp M       &hs RSHIFT J
                                  &sk LEFT_SHIFT  &kp SPACE    &to 1  &kp F
             >;
         };
@@ -279,10 +279,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         bt {
             bindings = <
-&trans      &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &sys_reset
-&trans      &trans      &trans      &trans  &trans    &trans  &trans  &trans  &trans  &bootloader
-&bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &trans  &to 0     &to 1   &trans  &trans  &trans  &trans
-                                    &to 0   &trans    &trans  &to 1
+&sys_reset   &trans      &trans      &trans  &mkp RCLK    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans      &trans      &trans  &kp B        &trans  &trans  &trans  &trans  &bootloader
+&bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &trans  &to 0        &to 1   &trans  &trans  &trans  &trans
+                                     &to 0   &trans       &trans  &to 1
             >;
         };
     };
