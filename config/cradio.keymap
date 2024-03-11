@@ -270,10 +270,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         tri_layer {
             bindings = <
-&kp H       &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT  &trans    &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &trans
-&kp TAB     &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans    &trans            &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp LG(RBKT)
-&kp LSHIFT  &mkp RCLK         &mwh SCROLL_UP  &mwh SCROLL_DOWN   &to 0     &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
-                                              &to 0              &trans    &to 4             &kp RGUI
+&kp H       &trans          &trans          &mwh SCROLL_RIGHT  &trans    &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &none
+&kp TAB     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans    &trans            &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp LG(RBKT)
+&kp LSHIFT  &mkp RCLK       &mwh SCROLL_UP  &mwh SCROLL_DOWN   &to 0     &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
+                                            &to 0              &trans    &to 4             &kp RGUI
             >;
         };
 
