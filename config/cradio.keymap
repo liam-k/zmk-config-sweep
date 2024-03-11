@@ -243,19 +243,19 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         default_layer {
             bindings = <
-&kp K         &kp KP_DOT  &kp O       &kp KP_COMMA    &kp Y        &kp V  &kp G       &kp C       &kp L       &z_eszett
-&lt 1 H       &hm LCTL A  &hm LALT E  &hm LGUI I      &kp U        &kp D  &hm RGUI T  &hm RALT R  &hm RCTL N  &kp S
-&hs LSHIFT X  &kp Q       &de_ae      &de_ue          &de_oe       &kp B  &kp P       &kp W       &kp M       &hs RSHIFT J
-                                      &sk LEFT_SHIFT  &kp SPACE    &to 1  &kp F
+&kp K    &kp KP_DOT  &kp O       &kp KP_COMMA    &kp Y        &kp V  &kp G       &kp C       &kp L       &z_eszett
+&lt 1 H  &hm LCTL A  &hm LALT E  &hm LGUI I      &kp U        &kp D  &hm RGUI T  &hm RALT R  &hm RCTL N  &kp S
+&lt 3 X  &kp Q       &de_ae      &de_ue          &de_oe       &kp B  &kp P       &kp W       &kp M       &hs RSHIFT J
+                                 &sk LEFT_SHIFT  &kp SPACE    &to 1  &kp F
             >;
         };
 
         left_layer {
             bindings = <
-&kp ESCAPE       &kp UNDER            &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp CARET       &kp EXCLAMATION  &kp LS(LESS_THAN)          &kp LS(GREATER_THAN)        &kp EQUAL       &kp AMPERSAND
-&kp TAB          &td BACKSLASH SLASH  &hm LALT LEFT_BRACE  &hm LGUI RIGHT_BRACE  &kp ASTERISK    &kp QUESTION     &hm RGUI LEFT_PARENTHESIS  &hm RALT RIGHT_PARENTHESIS  &hm RCTL MINUS  &hm AT_SIGN COLON
-&hs LSHIFT HASH  &kp DOLLAR           &kp LA(PIPE)         &kp LA(TILDE)         &kp GRAVE       &kp PLUS         &kp PERCENT                &kp DOUBLE_QUOTES           &kp SQT         &kp RSHIFT
-                                                           &to 0                 &trans          &to 2            &trans
+&kp ESCAPE       &kp UNDER            &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp CARET        &kp EXCLAMATION  &kp LS(LESS_THAN)          &kp LS(GREATER_THAN)        &kp EQUAL       &kp AMPERSAND
+&kp TAB          &td BACKSLASH SLASH  &hm LALT LEFT_BRACE  &hm LGUI RIGHT_BRACE  &kp ASTERISK     &kp QUESTION     &hm RGUI LEFT_PARENTHESIS  &hm RALT RIGHT_PARENTHESIS  &hm RCTL MINUS  &hm AT_SIGN COLON
+&hs LSHIFT HASH  &kp DOLLAR           &kp LA(PIPE)         &kp LA(TILDE)         &kp GRAVE        &kp PLUS         &kp PERCENT                &kp DOUBLE_QUOTES           &kp SQT         &kp RSHIFT
+                                                           &to 0                 &kp BACKSPACE    &to 2            &kp BACKSPACE
             >;
         };
 
@@ -270,10 +270,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         tri_layer {
             bindings = <
-&kp H       &trans          &trans          &mwh SCROLL_RIGHT  &trans    &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &none
-&kp TAB     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans    &trans            &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp LG(RBKT)
-&kp LSHIFT  &mkp RCLK       &mwh SCROLL_UP  &mwh SCROLL_DOWN   &to 0     &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
-                                            &to 0              &trans    &to 4             &kp RGUI
+&kp H       &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans           &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &none
+&kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &trans           &kp UP_ARROW      &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp ENTER
+&kp LSHIFT  &mkp RCLK       &mkp MCLK       &mkp LCLK            &to 0            &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
+                                            &to 0                &kp BACKSPACE    &to 4             &kp ENTER
             >;
         };
 
