@@ -101,7 +101,7 @@
         combo_slsh {
             timeout-ms = <50>;
             key-positions = <28 29>;
-            bindings = <&kp DE_FS>;
+            bindings = <&kp DE_FSLH>;
             layers = <0>;
         };
 
