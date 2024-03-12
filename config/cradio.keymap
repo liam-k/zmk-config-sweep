@@ -22,19 +22,42 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <22 23>;
             bindings = <&kp ESC>;
         };
 
-        combo_3 {
+        combo_up {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <&to 3>;
+            bindings = <kp UP>;
+   	        layers = <0 1>;
         };
 
-        combo_ent {
+        combo_down {
             timeout-ms = <50>;
             key-positions = <27 28>;
+            bindings = <&kp DOWN>;
+   	        layers = <0 1>;
+
+        };
+
+        combo_left {
+	        timeout-ms = <50>;
+	        key-positions = <16 17>;
+	        bindings = <&kp LEFT>;
+   	        layers = <0 1>;
+	    };
+
+        combo_right {
+	        timeout-ms = <50>;
+	        key-positions = <17 18>;
+	        bindings = <&kp RIGHT>;
+   	        layers = <0 1>;
+	    };
+
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
             bindings = <&kp RET>;
         };
 
@@ -44,124 +67,38 @@
             bindings = <&to 1>;
         };
 
-        combo_1_high {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&to 1>;
-        };
-
-        combo_g {
-            timeout-ms = <15>;
-            key-positions = <12 13>;
-            bindings = <&kp G>;
-            layers = <0>;
-        };
-
-        combo_j {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp J>;
-            layers = <0>;
-        };
-
-        combo_p {
-            timeout-ms = <15>;
-            key-positions = <16 17>;
-            bindings = <&kp P>;
-            layers = <0>;
-        };
-
-        combo_b {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp B>;
-            layers = <0>;
-        };
-
         combo_backspace {
             timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp BACKSPACE>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
-        combo_com {
+        combo_tab {
             timeout-ms = <50>;
-            key-positions = <20 21>;
-            bindings = <&kp DE_COMM>;
-            layers = <0>;
-        };
-
-        combo_minus {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp MINUS>;
-            layers = <0>;
-        };
-
-        combo_slsh {
-            timeout-ms = <50>;
-            key-positions = <28 29>;
-            bindings = <&kp DE_FSLH>;
-            layers = <0>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
         };
 
         combo_sqt {
             timeout-ms = <50>;
-            key-positions = <12 13>;
+            key-positions = <2 3>;
             bindings = <&kp DE_SQT>;
-            layers = <1>;
+            layers = <0>;
         };
 
         combo_dqt {
             timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp DQT>;
-            layers = <1>;
-        };
-
-        combo_bslh {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp BSLH>;
-            layers = <1>;
-        };
-
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp DE_LBKT>;
-            layers = <1>;
-        };
-
-        combo_n0 {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp N0>;
-            layers = <2>;
-        };
-
-        combo_lalt {
-            timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&kp LALT>;
-            layers = <3>;
+            bindings = <&kp DE_DQT>;
+            layers = <1>;
         };
 
         combo_del {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <28 29>;
             bindings = <&kp DEL>;
-            layers = <3>;
         };
-
-        combo_left {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp LEFT>;
-            layers = <3>;
-        };
-    };
 
     behaviors {
         hm: homerow_mods {
@@ -221,18 +158,18 @@
         default_layer {
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp DE_Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS DE_Z
-&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp S
-&blt 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
-                                          &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp F
+&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
+&lt 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
+                                          &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp S
             >;
         };
 
         symbol_layer {
             bindings = <
-&kp ESCAPE          &kp DE_UNDS          &kp DE_LBKT       &kp DE_RBKT       &kp CARET        &kp DE_EXCL  &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp BACKSPACE
-&kp TAB             &hm DE_BSLH DE_FSLH  &hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR      &kp DE_QUES  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RCTL DE_MINS  &hm DE_AT DE_COLN
-&hm LSHIFT DE_HASH  &hm DE_DLR DE_EURO   &kp DE_PIPE       &kp DE_TILD       &kp DE_GRV       &kp DE_PLUS  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
-                                                           &to 0             &kp BACKSPACE    &to 2        &kp DE_AMPS
+&kp ESCAPE          &kp DE_UNDS          				   &kp DE_LBRC       &kp DE_RBRC       &kp CARET         &kp DE_EXCL  &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp BACKSPACE
+&kp TAB             &hm LEFT_CONTROL DE_BSLH		       &hm LALT DE_LBKT  &hm LGUI DE_RBRC  &kp DE_STAR  &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
+&hm LSHIFT DE_HASH  &hm DE_DLR DE_EURO   &kp DE_PIPE       &kp DE_TILD       &kp DE_GRV        &kp DE_AMPS  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
+                                                           &to 0             &kp BACKSPACE     &to 2        &kp DE_PLUS
             >;
         };
 
@@ -247,10 +184,10 @@
 
         nav_layer {
             bindings = <
-&kp H    &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans          &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &kp BACKSPACE
-&kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &mkp LCLK       &kp UP_ARROW      &kp DOWN        &kp UP            &kp RIGHT          &kp ENTER
-&to 0    &mkp RCLK       &mkp MCLK       &kp ENTER            &to 0           &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
-                                         &to 0                &sk LEFT_ALT    &to 4             &kp ENTER
+&kp ESCAPE    &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &kp F6     &kp LG(LA(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(UP))  	&kp LA(LG(RIGHT))  	&kp BACKSPACE
+&kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &mkp LCLK       &kp LEFT      	&kp DOWN        	&kp UP         	 &kp RIGHT         	&kp ENTER
+&to 0    &mkp RCLK       &mkp MCLK       &kp ENTER            &to 0           &kp LG(LS(TAB))   &kp LA(LS(TAB))    &kp LA(TAB)     	&kp LG(TAB)        	&td END PG_UP
+                                         &to 0                &sk LEFT_ALT    &to 4             &td HOME PG_DN
             >;
         };
 
