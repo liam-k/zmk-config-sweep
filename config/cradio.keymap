@@ -220,7 +220,7 @@
 
         default_layer {
             bindings = <
-&kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS Z
+&kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp DE_Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS DE_Z
 &lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp S
 &blt 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
                                           &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp F
@@ -256,9 +256,9 @@
 
         bt_sys {
             bindings = <
-&sys_reset   &trans      &trans      &trans  &mkp RCLK    &trans  &trans  &trans  &trans  &sys_reset
+&sys_reset   &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &mkp RCLK    &trans  &trans  &trans  &trans  &sys_reset
 &bootloader  &trans      &trans      &trans  &kp B        &trans  &trans  &trans  &trans  &bootloader
-&bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &trans  &to 0        &to 1   &trans  &trans  &trans  &trans
+&trans      &trans      &trans	     &trans  &to 0        &to 1   &trans  &trans  &trans  &trans
                                      &to 0   &trans       &trans  &to 1
             >;
         };
