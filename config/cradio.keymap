@@ -204,7 +204,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        bl: layertap {
+        blt: layertap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP";
             #binding-cells = <2>;
@@ -222,7 +222,7 @@
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS Z
 &lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp S
-&bl 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
+&blt 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
                                           &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp F
             >;
         };
