@@ -29,7 +29,7 @@
         combo_up {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <kp UP>;
+            bindings = <&kp UP>;
    	        layers = <0 1>;
         };
 
@@ -61,10 +61,10 @@
             bindings = <&kp RET>;
         };
 
-        combo_1 {
-            timeout-ms = <50>;
-            key-positions = <30 33>;
-            bindings = <&to 1>;
+        combo_bt_sys {
+            timeout-ms = <200>;
+            key-positions = <31 32>;
+            bindings = <&mo 3>;
         };
 
         combo_backspace {
@@ -160,45 +160,36 @@
         default_layer {
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp DE_Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS DE_Z
-&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
-&lt 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
-                                          &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp S
+&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             	&kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
+&lt 2 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA      	 &kp B  &kp P       &kp W       &kp M                &kp J
+                                          &lt 2 SPACE    &sk LEFT_SHIFT   	 &to 1  &lt 2 S
             >;
         };
 
         symbol_layer {
             bindings = <
-&kp ESCAPE          &kp DE_UNDS          				   &kp DE_LBRC       &kp DE_RBRC       &kp CARET         &kp DE_EXCL  &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp BACKSPACE
-&kp TAB             &hm LEFT_CONTROL DE_BSLH		       &hm LALT DE_LBKT  &hm LGUI DE_RBRC  &kp DE_STAR  &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
-&hm LSHIFT DE_HASH  &hm DE_DLR DE_EURO   &kp DE_PIPE       &kp DE_TILD       &kp DE_GRV        &kp DE_AMPS  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
-                                                           &to 0             &kp BACKSPACE     &to 2        &kp DE_PLUS
+&kp ESCAPE          &kp DE_UNDS          				   &kp DE_LBRC       &kp DE_RBRC       &kp CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
+&kp TAB             &hm LEFT_CONTROL DE_BSLH		       &hm LALT DE_LBKT  &hm LGUI DE_RBRC  &kp DE_STAR  	 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
+&kp DE_HASH  		&hm DE_DLR DE_EURO  	  			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV        &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
+                                                           &to 0             &kp BACKSPACE     &to 2       		 &to 0
             >;
         };
 
-        num_layer {
+        num_nav_layer {
             bindings = <
-&trans   &kp C_PP   &kp C_PREV         &kp C_NEXT         &trans            &trans  &kp N7         &kp N8  &kp N9      &trans
-&kp TAB  &trans     &hm LALT C_VOL_DN  &hm LGUI C_VOL_UP  &trans            &trans  &hm RGUI N4    &kp N5  &kp N6      &kp EQUAL
-&to 0    &kp PRCNT  &kp SLASH          &kp DE_STAR        &to 0             &trans  &kp N1         &kp N2  &td DOT N3  &kp MINUS
-                                       &to 0              &sk LEFT_SHIFT    &to 3   &kp BACKSPACE
-            >;
-        };
-
-        nav_layer {
-            bindings = <
-&kp ESCAPE    &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &kp F6     &kp LG(LA(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(UP))  	&kp LA(LG(RIGHT))  	&kp BACKSPACE
-&kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &mkp LCLK       &kp LEFT      	&kp DOWN        	&kp UP         	 &kp RIGHT         	&kp ENTER
-&to 0    &mkp RCLK       &mkp MCLK       &kp ENTER            &to 0           &kp LG(LS(TAB))   &kp LA(LS(TAB))    &kp LA(TAB)     	&kp LG(TAB)        	&td END PG_UP
-                                         &to 0                &sk LEFT_ALT    &to 4             &td HOME PG_DN
+&kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 	 				&kp UP_ARROW	    	&kp LA(LG(UP))      	&kp LA(LG(RIGHT)) 	     	 			 &hm HOME PAGE_UP   &kp N7         &kp N8  &kp N9      &kp BACKSPACE
+&hm C_PREV C_VOL_DN  &hm LEFT_CONTROL LEFT_ARROW 	  &hm LALT DOWN_ARROW      &hm LGUI RIGHT_ARROW     &hm C_NEXT C_VOL_UP    					&hm END PAGE_DOWN   &hm RGUI N4    &hm RALT N5  &hm RIGHT_CONTROL N6      &kp EQUAL
+&kp LG(LS(TAB))   	&kp LA(LS(TAB))    &hm C_PP LA(LG(SPACE)) 	&kp LA(TAB) 	    &kp LG(TAB)        		      	&kp PLUS 	 				&kp N1         &hm N0 N2  &td DOT N3  &kp MINUS
+												 															&to 0 &hm F6 C_VOICE_COMMAND   		&to 0   &kp N0
             >;
         };
 
         bt_sys {
             bindings = <
-&sys_reset   &bt BT_PRV   &bt BT_NXT  &bt BT_CLR  &mkp RCLK    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans      &trans      &trans  &kp B        &trans  &trans  &trans  &trans  &bootloader
-&trans      &trans      &trans	     &trans  &to 0        &to 1   &trans  &trans  &trans  &trans
-                                     &to 0   &trans       &trans  &to 1
+&kp C_BRIGHTNESS_DEC   &kp C_BRIGHTNESS_INC   	&trans 		&trans			&sys_reset      &sys_reset   &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP
+&trans  			&trans      			&trans      &trans  		&bootloader     &bootloader  &trans  &trans  &trans  &kp C_MUTE
+&trans      			&trans     				 &trans	     &trans  			&to 0        &to 1   &trans  &trans  &trans  &trans
+                                    									 &to 0   &trans       &trans  &to 1
             >;
         };
     };
