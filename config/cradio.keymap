@@ -81,10 +81,10 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             layers = <0>;
         };
 
-        combo_scol {
+        combo_eszett {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            bindings = <&kp SEMI>;
+            bindings = <&de_eszett>;
             layers = <0>;
         };
 
@@ -246,16 +246,16 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             >;
         };
 
-        left_layer {
+        symbol_layer {
             bindings = <
 &kp ESCAPE       &kp UNDER            &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp CARET        &kp EXCLAMATION  &kp LS(LESS_THAN)          &kp LS(GREATER_THAN)        &kp EQUAL       &kp AMPERSAND
 &kp TAB          &td BACKSLASH SLASH  &hm LALT LEFT_BRACE  &hm LGUI RIGHT_BRACE  &kp ASTERISK     &kp QUESTION     &hm RGUI LEFT_PARENTHESIS  &hm RALT RIGHT_PARENTHESIS  &hm RCTL MINUS  &hm AT_SIGN COLON
-&hs LSHIFT HASH  &kp DOLLAR           &kp LA(PIPE)         &kp LA(TILDE)         &kp GRAVE        &kp PLUS         &kp PERCENT                &kp DOUBLE_QUOTES           &kp SQT         &kp RSHIFT
+&hs LSHIFT HASH  &kp DOLLAR           &kp LA(PIPE)         &kp LA(TILDE)         &kp GRAVE        &kp PLUS         &kp PERCENT                &kp DOUBLE_QUOTES           &kp SQT         &kp SEMI
                                                            &to 0                 &kp BACKSPACE    &to 2            &kp BACKSPACE
             >;
         };
 
-        right_layer {
+        num_layer {
             bindings = <
 &trans         &kp C_PP   &kp C_PREV         &kp C_NEXT         &trans    &trans  &kp N7       &kp N8  &kp N9      &trans
 &kp TAB        &trans     &hm LALT C_VOL_DN  &hm LGUI C_VOL_UP  &trans    &trans  &hm RGUI N4  &kp N5  &kp N6      &kp EQUAL
@@ -264,9 +264,9 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             >;
         };
 
-        tri_layer {
+        nav_layer {
             bindings = <
-&kp H       &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans           &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &none
+&kp H       &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans           &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &de_eszett
 &kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &trans           &kp UP_ARROW      &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp ENTER
 &kp LSHIFT  &mkp RCLK       &mkp MCLK       &mkp LCLK            &to 0            &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
                                             &to 0                &kp BACKSPACE    &to 4             &kp ENTER
