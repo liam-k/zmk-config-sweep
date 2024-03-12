@@ -160,6 +160,13 @@
             bindings = <&kp LEFT>;
             layers = <3>;
         };
+
+        combo_lclk {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&mkp LCLK>;
+            layers = <3>;
+        };
     };
 
     behaviors {
@@ -248,8 +255,7 @@
             bindings = <
 &kp H       &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans           &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &kp BACKSPACE
 &kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &trans           &kp UP_ARROW      &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp ENTER
-&kp LSHIFT  &mkp RCLK       &mkp MCLK       &mkp
-LCLK            &to 0            &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
+&kp LSHIFT  &mkp RCLK       &mkp MCLK       &mkp LCLK            &to 0            &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
                                             &to 0                &kp BACKSPACE    &to 4             &kp ENTER
             >;
         };
