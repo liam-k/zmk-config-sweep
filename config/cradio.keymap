@@ -230,7 +230,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&de_eszett &kp>;
+            bindings = <&de_eszett>, <&kp>;
         };
     };
 
@@ -239,7 +239,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)
 
         default_layer {
             bindings = <
-&kp K    &kp KP_DOT  &kp O       &kp KP_COMMA    &kp Y        &kp V  &kp G       &kp C       &kp L       &hm 0 Z
+&kp K    &kp KP_DOT  &kp O       &kp KP_COMMA    &kp Y        &kp V  &kp G       &kp C       &kp L      &z_eszett(&de_eszett, Z)
 &lt 1 H  &hm LCTL A  &hm LALT E  &hm LGUI I      &kp U        &kp D  &hm RGUI T  &hm RALT R  &hm RCTL N  &kp S
 &lt 3 X  &kp Q       &de_ae      &de_ue          &de_oe       &kp B  &kp P       &kp W       &kp M       &hs RSHIFT J
                                  &sk LEFT_SHIFT  &kp SPACE    &to 1  &kp F
