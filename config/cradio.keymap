@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "keymap_german.h"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
-#include "keymap_german.h"
 
 &mt {
     flavor = "tap-preferred";
@@ -212,44 +212,44 @@
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
         };
-	    };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp K  &kp DE_DOT  &kp O   &kp DE_COMM    &kp Y       		  			&kp V  &kp G       &kp C       &kp L     	 &hm DE_SS Z
-&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E  &hm LGUI I     					&kp U        &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp S
-&bl 3 X  &kp Q  &kp DE_ADIA    &kp DE_UDIA   &kp DE_ODIA      	 	&kp B  &kp P       &kp W       &kp M       &kp J
-                   	               	&kp SPACE &sk LEFT_SHIFT        &to 1  &kp F
+&kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS Z
+&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             &kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp S
+&bl 3 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA       &kp B  &kp P       &kp W       &kp M                &kp J
+                                          &kp SPACE    &sk LEFT_SHIFT    &to 1  &kp F
             >;
         };
 
         symbol_layer {
             bindings = <
-&kp ESCAPE       &kp DE_UNDS            &kp DE_LBKT     &kp DE_RBKT         &kp CARET       &kp DE_EXCL &kp MAC_LABK    &kp MAC_RABK        &kp DE_EQL       &kp BACKSPACE
-&kp TAB          &td DE_BSLH DE_FSLH  &hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR       &kp DE_QUES     &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RCTL DE_MINS  &hm DE_AT DE_COLN
-&hm LSHIFT DE_HASH  &hm DE_DLR DE_EURO   &kp DE_PIPE     &kp DE_TILD      &kp DE_GRV        &kp DE_PLUS     &kp DE_PERC         &kp DE_DQT      &kp DE_SQT    &kp DE_SEMI
-                                                           &to 0          &kp BACKSPACE     &to 2            &kp DE_AMPS
+&kp ESCAPE          &kp DE_UNDS          &kp DE_LBKT       &kp DE_RBKT       &kp CARET        &kp DE_EXCL  &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp BACKSPACE
+&kp TAB             &td DE_BSLH DE_FSLH  &hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR      &kp DE_QUES  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RCTL DE_MINS  &hm DE_AT DE_COLN
+&hm LSHIFT DE_HASH  &hm DE_DLR DE_EURO   &kp DE_PIPE       &kp DE_TILD       &kp DE_GRV       &kp DE_PLUS  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
+                                                           &to 0             &kp BACKSPACE    &to 2        &kp DE_AMPS
             >;
         };
 
         num_layer {
             bindings = <
-&trans         &kp C_PP   &kp C_PREV         &kp C_NEXT         &trans     &trans  &kp N7       &kp N8  &kp N9      &trans
-&kp TAB        &trans     &hm LALT C_VOL_DN  &hm LGUI C_VOL_UP  &trans     &trans  &hm RGUI N4  &kp N5  &kp N6      &kp EQUAL
-&to 0		  &kp PRCNT  &kp SLASH          &kp DE_STAR        &to 0      &trans  &kp N1       &kp N2  &td DOT N3  &kp MINUS
-                                             &to 0      &sk LEFT_SHIFT     &to 3   &kp BACKSPACE
+&trans   &kp C_PP   &kp C_PREV         &kp C_NEXT         &trans            &trans  &kp N7         &kp N8  &kp N9      &trans
+&kp TAB  &trans     &hm LALT C_VOL_DN  &hm LGUI C_VOL_UP  &trans            &trans  &hm RGUI N4    &kp N5  &kp N6      &kp EQUAL
+&to 0    &kp PRCNT  &kp SLASH          &kp DE_STAR        &to 0             &trans  &kp N1         &kp N2  &td DOT N3  &kp MINUS
+                                       &to 0              &sk LEFT_SHIFT    &to 3   &kp BACKSPACE
             >;
         };
 
         nav_layer {
             bindings = <
-&kp H       &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans           &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &kp BACKSPACE
-&kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &mkp LCLK           &kp UP_ARROW      &kp DOWN        &hm RALT UP       &hm RCTL RIGHT     &kp ENTER
-&to 0  &mkp RCLK       &mkp MCLK       &kp ENTER            &to 0            &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
-                                            &to 0                &sk LEFT_ALT    &to 4             &kp ENTER
+&kp H    &kp BACKSPACE   &kp UP_ARROW    &kp C_VOICE_COMMAND  &trans          &kp LG(LA(LEFT))  &kp LA(LG(UP))  &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))  &kp BACKSPACE
+&kp TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW      &mkp LCLK       &kp UP_ARROW      &kp DOWN        &kp UP            &kp RIGHT          &kp ENTER
+&to 0    &mkp RCLK       &mkp MCLK       &kp ENTER            &to 0           &kp RGUI          &td HOME PG_DN  &td END PG_UP     &trans             &kp RSHIFT
+                                         &to 0                &sk LEFT_ALT    &to 4             &kp ENTER
             >;
         };
 
