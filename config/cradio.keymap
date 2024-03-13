@@ -145,6 +145,17 @@
             bindings = <&kp>, <&to>;
         };
 
+        hstl: homerow_sticky_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_STICKY_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&sl>;
+        };
+
+
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -172,7 +183,7 @@
         default_layer {
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp DE_COMM  &kp DE_Y             &kp V  &kp G       &kp C       &kp L                &hm DE_SS DE_Z
-&lt 1 H  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             	&kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
+&hstl H 1  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp U             	&kp D  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
 &lt 2 X  &kp Q               &kp DE_ADIA  &kp DE_UDIA  &kp DE_ODIA      	 &kp B  &kp P       &kp W       &kp M                &kp J
                                           &lt 2 SPACE    &sk LEFT_SHIFT   	 &to 1  &lt 2 S
             >;
@@ -191,7 +202,7 @@
             bindings = <
 &kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&hm LA(UP) UP	    	&kp LA(LG(UP))     &kp LA(LG(RIGHT)) 	     	 		  		 &hm HOME PAGE_UP   &kp N7         &kp N8  &kp N9      &kp BACKSPACE
 &hm C_PREV C_VOL_DN  &hm LA(LEFT) LEFT 	  &hm LA(DOWN) DOWN      &hm LA(RIGHT) RIGHT     &hm C_NEXT C_VOL_UP    						&hm END PAGE_DOWN   &hm RGUI N4    &hm RALT N5  &hm RIGHT_CONTROL N6      &kp EQUAL
-&kp LA(LS(LEFT))   	&kp LS(LEFT)    &hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	    &kp LA(LS(RIGHT))        		      							&kp DE_PLUS4 		&kp N1         &hm N0 N2  &td DOT N3  &kp MINUS
+&kp LA(LS(LEFT   	&kp LS(LEFT)    &hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	    &kp LA(LS(RIGHT))        		      							&kp DE_PLUS4 		&kp N1         &hm N0 N2  &td DOT N3  &kp MINUS
 												 															&to 0 &hm F6 C_VOICE_COMMAND   		&to 0   &kp N0
             >;
         };
