@@ -39,6 +39,7 @@
 // Row 1
 #define DE_CIRC GRAVE // ^ (dead)
 #define MAC_CIRC NUBS // ^ (dead | mac)
+#define DE_CARET RA(RS(DE_6)) // ^ (dead | mac)
 #define DE_1    N1    // 1
 #define DE_2    N2    // 2
 #define DE_3    N3    // 3
@@ -146,10 +147,10 @@
 // Row 1
 #define DE_SUP2 RA(DE_2)    // ²
 #define DE_SUP3 RA(DE_3)    // ³
-#define DE_LBRC RA(DE_7)    // {
+#define DE_LBRC RA(DE_8)    // {
 #define DE_LBKT RA(DE_5)    // [
 #define DE_RBKT RA(DE_6)    // ]
-#define DE_RBRC RA(DE_0)    // }
+#define DE_RBRC RA(DE_9)    // }
 #define DE_BSLH RA(RS(DE_7))   // (backslash)
 // Row 2
 #define DE_AT   RA(DE_Q)    // @

@@ -168,13 +168,13 @@
 
         symbol_layer {
             bindings = <
-&kp ESCAPE          &kp DE_UNDS          				   &kp DE_LBRC       &kp DE_RBRC       &kp CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
-&kp TAB             &hm LEFT_CONTROL DE_BSLH		       &hm LALT DE_LBKT  &hm LGUI DE_RBRC  &kp DE_STAR  	 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
+&kp ESCAPE          &kp DE_UNDS          				   &kp DE_LBKT       &kp DE_RBKT       &kp DE_CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
+&kp TAB             &hm LEFT_CONTROL DE_BSLH		       &hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR  	 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
 &kp DE_HASH  		&hm DE_DLR DE_EURO  	  			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV        &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
                                                            &to 0             &kp BACKSPACE     &to 2       		 &to 0
             >;
         };
-
+≠
         num_nav_layer {
             bindings = <
 &kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 	 				&kp UP_ARROW	    	&kp LA(LG(UP))      	&kp LA(LG(RIGHT)) 	     	 			 &hm HOME PAGE_UP   &kp N7         &kp N8  &kp N9      &kp BACKSPACE
