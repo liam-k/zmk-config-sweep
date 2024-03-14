@@ -120,6 +120,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
+            require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -173,6 +174,14 @@
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
         };
+
+        mo_to: behavior_mo_to {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&to>;
+        };
     };
 
     keymap {
@@ -181,9 +190,9 @@
         default_layer {
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp U  &kp DE_UDIA             &kp V  &kp G       &kp H       	&kp L                &hm DE_SS DE_Z
-&lt 1 C &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
+&blt 1 C &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
 &kp X  &kp Q               &kp DE_ADIA   &kp DE_COMM  &kp DE_ODIA      	 &kp P  &kp D       &kp W       &kp M                &kp J
-                                          &lt 2 SPACE    &sk LEFT_SHIFT   	 &to 1  &lt 2 S
+                                          &blt 2 SPACE    &sk LEFT_SHIFT   	 &mo_to 1 1 &blt 2 S
             >;
         };
 
@@ -192,16 +201,16 @@
 &kp ESCAPE          &hm DE_BSLH DE_UNDS          	&kp DE_LBKT       &kp DE_RBKT       &kp DE_CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
 &kp TAB             &hm LEFT_CONTROL DE_FSLH		&hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR  		 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
 &kp DE_HASH  		&hm DE_DLR DE_EURO    			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV      	 &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
-                                                          			 &to 0             &kp BACKSPACE     &hthl 2 0      		 &to 0
+                                                          			 &to 0             &kp BACKSPACE    	 &to 2      		 &to 0
             >;
         };
 
         num_nav_layer {
 
             bindings = <
-&kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&hm LA(UP) UP	    	&kp LA(LG(UP))     &kp LA(LG(RIGHT)) 	     	 		  				 &hm HOME PAGE_UP  	&hm DE_LPAR N7      &kp N8    		&hm DE_RPAR N9     		 &kp BACKSPACE
-&hm C_PREV C_VOL_DN  &hm LA(LEFT) LEFT 	  &hm LA(DOWN) DOWN      &hm LA(RIGHT) RIGHT     &hm C_NEXT C_VOL_UP    							&hm END PAGE_DOWN   &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &kp DE_EQL
-&kp LA(LS(LEFT))   	&kp LS(LEFT)    &hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	    &kp LA(LS(RIGHT))        		      						&hm DE_STAR DE_PLUS	&hm DE_DOT N1  		&hm N0 N2   	&td DE_COMM N3  		 &hm DE_FSLH DE_MINS
+&kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&hm LA(UP) UP	    	&kp LA(LG(UP))     &kp LA(LG(RIGHT)) 	     	 		  				 &hm HOME PAGE_UP  	&td DE_LPAR N7      &kp N8    		&td DE_RPAR N9     		 &kp BACKSPACE
+&hm C_PREV C_VOL_DN  &hm LA(LEFT) LEFT 	  &hm LA(DOWN) DOWN      &hm LA(RIGHT) RIGHT     &hm C_NEXT C_VOL_UP    							&hm END PAGE_DOWN   &hm RGUI N4  		&td RALT N5  	&hm RIGHT_CONTROL N6     &td DE_EQL
+&kp LA(LS(LEFT))   	&kp LS(LEFT)    &hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	    &kp LA(LS(RIGHT))        		      						&td DE_STAR DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &td DE_FSLH DE_MINS
 												 													&to 0 &hm F6 C_VOICE_COMMAND   	&to 0   &kp N0
             >;
         };
