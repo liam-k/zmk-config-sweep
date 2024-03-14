@@ -160,7 +160,7 @@
             label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <50>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -191,35 +191,33 @@
 
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp K    &kp DE_DOT          &kp O        &kp U  &kp DE_UDIA             &kp V  &kp G       &kp H       	&kp L                &hm DE_SS DE_Z
-&blt 1 C &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
-&kp X  &kp Q               &kp DE_ADIA   &kp DE_COMM  &kp DE_ODIA      	 &kp P  &kp D       &kp W       &kp M                &kp J
-                                          &blt 2 SPACE    &sk LEFT_SHIFT   	 &mo_to 1 1 &blt 2 S
-            >;
+&td DE_FSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT U 		 	 &td DE_CARET DE_UDIA   			&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK H      &td DE_EQL L            &td DE_SS DE_Z
+&kp C 				&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			 &td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  		&hm RIGHT_CONTROL N  	&td F DE_COLN
+&td DE_HASH X  		&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD DE_COMM  	 &td DE_GRV DE_ODIA  				 &td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &td DE_SEMI J
+                                          														&blt 2 SPACE    &sk LEFT_SHIFT   	 &mo_to 1 1 &blt 2 S
         };
 
         symbol_layer {
             bindings = <
-&kp ESCAPE          &hm DE_BSLH DE_UNDS          	&kp DE_LBKT       &kp DE_RBKT       &kp DE_CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
-&kp TAB             &hm LEFT_CONTROL DE_FSLH		&hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR  		 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
-&kp DE_HASH  		&hm DE_DLR DE_EURO    			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV      	 &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
-                                                          			 &to 0             &kp BACKSPACE    	 &to 2      		 &to 0
+&td ESCAPE DE_BSLH  &kp DE_UNDS          		&kp DE_LBKT       &kp DE_RBKT       &kp DE_CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
+&kp TAB             &hm LEFT_CONTROL DE_FSLH	&hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR  		 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
+&kp DE_HASH  		&hm DE_DLR DE_EURO    		&kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV      	 &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
+                                                        	 &to 0             &kp BACKSPACE    	 &to 2      		 &to 0
             >;
         };
 
         num_nav_layer {
 
             bindings = <
-&kp LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&hm LA(UP) UP	    	&kp LA(LG(UP))     &kp LA(LG(RIGHT)) 	     	 		  				 &hm HOME PAGE_UP  	&td DE_LPAR N7      &kp N8    		&td DE_RPAR N9     		 &kp BACKSPACE
-&hm C_PREV C_VOL_DN  &hm LA(LEFT) LEFT 	  &hm LA(DOWN) DOWN      &hm LA(RIGHT) RIGHT     &hm C_NEXT C_VOL_UP    							&hm END PAGE_DOWN   &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &kp DE_EQL
-&kp LA(LS(LEFT))   	&kp LS(LEFT)    &hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	    &kp LA(LS(RIGHT))        		      						&td DE_STAR DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &td DE_FSLH DE_MINS
-												 													&to 0 &hm F6 C_VOICE_COMMAND   	&to 0   &kp N0
+&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&td LA(UP) UP			&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	     	 		  	&hm HOME PAGE_UP  	&td DE_LPAR N7      &kp N8    		&td DE_RPAR N9     		 &kp BACKSPACE
+&td LA(LEFT)  				&td DE_LBRC LEFT 		&td LA(DOWN) DOWN      	&td DE_RBRC RIGHT     	&kp LA(RIGHT)     								&hm END PAGE_DOWN   &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &kp DE_EQL
+&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        		      			&td DE_STAR DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &td DE_FSLH DE_MINS
+												 														&to 0 		&hm F6 C_VOICE_COMMAND   	&to 0  		 &kp N0
             >;
         };
 
