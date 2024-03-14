@@ -175,12 +175,12 @@
             bindings = <&to>, <&kp>;
         };
 
-        mo_to: behavior_mo_to {
+        mo_tog: behavior_mo_to {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&tog>;
         };
 
         sk: sticky_key {
@@ -190,7 +190,6 @@
 
     };
 
-    #define MO_TO(layer) &mo_to layer layer
 
     keymap {
         compatible = "zmk,keymap";
@@ -200,7 +199,7 @@
 &kp K    &kp DE_DOT          &kp O        &kp U  &kp DE_UDIA             &kp V  &kp G       &kp H       	&kp L                &hm DE_SS DE_Z
 &blt 1 C &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
 &kp X  &kp Q               &kp DE_ADIA   &kp DE_COMM  &kp DE_ODIA      	 &kp P  &kp D       &kp W       &kp M                &kp J
-                                          &blt 2 SPACE    &sk LEFT_SHIFT   	 MO_TO(1) &blt 2 S
+                                          &blt 2 SPACE    &sk LEFT_SHIFT   	 &mo_tog 1 1 &blt 2 S
             >;
         };
 
