@@ -144,16 +144,6 @@
             bindings = <&kp>, <&to>;
         };
 
-        hstl: homerow_sticky_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_STICKY_LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&sl>;
-        };
-
         hthl: homerow_tap_hold_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_TAP_HOLD_LAYER";
@@ -191,7 +181,7 @@
         default_layer {
             bindings = <
 &kp K    &kp DE_DOT          &kp O        &kp U  &kp DE_UDIA             &kp V  &kp G       &kp H       	&kp L                &hm DE_SS DE_Z
-&hstl C 1  &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
+&lt 1 C &hm LEFT_CONTROL A  &hm LALT E   &hm LGUI I   &kp DE_Y        &kp B  &hm RGUI T  &hm RALT R  &hm RIGHT_CONTROL N  &kp F
 &kp X  &kp Q               &kp DE_ADIA   &kp DE_COMM  &kp DE_ODIA      	 &kp P  &kp D       &kp W       &kp M                &kp J
                                           &lt 2 SPACE    &sk LEFT_SHIFT   	 &to 1  &lt 2 S
             >;
