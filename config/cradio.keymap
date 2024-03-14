@@ -201,7 +201,7 @@
             bindings = <
 &kp ESCAPE          &hm DE_BSLH DE_UNDS          	&kp DE_LBKT       &kp DE_RBKT       &kp DE_CARET         &kp DE_EXCL      &kp MAC_LABK      &kp MAC_RABK      &kp DE_EQL        &kp DE_AMPS
 &kp TAB             &hm LEFT_CONTROL DE_FSLH		&hm LALT DE_LBRC  &hm LGUI DE_RBRC  &kp DE_STAR  		 &kp DE_QUES  	  &hm RGUI DE_LPAR  &hm RALT DE_RPAR  &hm RIGHT_CONTROL DE_MINS  &hm DE_AT DE_COLN
-&kp DE_HASH  		&hm DE_DLR DE_EURO    			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GV      	 &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
+&kp DE_HASH  		&hm DE_DLR DE_EURO    			 &kp MAC_PIPE       &kp DE_TILD       &kp DE_GRV      	 &kp DE_PLUS 	  &kp DE_PERC       &kp DE_DQT        &kp DE_SQT        &kp DE_SEMI
                                                           			 &to 0             &kp BACKSPACE     &hthl 2 0      		 &to 0
             >;
         };
