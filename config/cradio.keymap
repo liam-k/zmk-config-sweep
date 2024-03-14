@@ -81,10 +81,16 @@
             bindings = <&kp BACKSPACE>;
         };
 
+        combo_backspace_hr {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp BACKSPACE>;
+        };
+
         combo_tab {
             timeout-ms = <50>;
             key-positions = <11 12>;
-            bindings = <&kp DE_DQT>;
+            bindings = <&kp TAB>;
         };
 
         combo_undo {
