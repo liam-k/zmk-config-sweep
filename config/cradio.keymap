@@ -183,7 +183,7 @@
             bindings = <&mo>, <&to>;
         };
 
-        &sk {  // sticky-key config
+        sk: sticky_key {
             release-after-ms = <500>;  // release after 0.5s
             quick-release;             // no double capitalization when rolling keys
         };
