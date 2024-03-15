@@ -158,7 +158,7 @@
         };
 
         combo_redo {
-            timeout-ms = <80>;
+            timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp LG(LS(DE_Z))>;
             require-prior-idle-ms = <125>;
@@ -188,9 +188,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <220>;
             quick_tap_ms = <150>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <160>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -277,10 +277,10 @@
 
         default_layer {
             bindings = <
-&td DE_BSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT U 		 	 &td DE_CARET DE_UDIA   			&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK H      &td DE_EQL L            &td DE_AMPS DE_Z
-&td DE_FSLH C		&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			 &td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  		&hm RIGHT_CONTROL N  	&td DE_COLN F
-&td DE_HASH X  		&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD DE_COMM  	 &td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &td DE_SEMI J
-                                        								&mlt 2 SPACE    		 &sk LEFT_SHIFT   	 				&mo_to 2 1 					&td DE_SS S
+&td DE_BSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT DE_COMM    	&td DE_CARET DE_UDIA   				&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK C     &td DE_EQL L            &td DE_AMPS DE_Z
+&td DE_FSLH H		&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			&td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  		&hm RIGHT_CONTROL N  	&td DE_AT F
+&td DE_HASH X  		&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD U  	 		&td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &td DE_SEMI J
+                                        								&mlt 2 SPACE    		&sk LEFT_SHIFT   	 				&mo_to 2 1 					&td DE_SS S
               >;
           };
 
