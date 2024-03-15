@@ -21,64 +21,79 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <22 23>;
             bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_up {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <7 8>;
             bindings = <&kp UP>;
+            require-prior-idle-ms = <125>;
         };
 
         page_up {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <6 7 8>;
             bindings = <&kp PAGE_UP>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_down {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <27 28>;
             bindings = <&kp DOWN>;
-
+            require-prior-idle-ms = <125>;
         };
 
         page_down {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <26 27 28>;
             bindings = <&kp PAGE_DOWN>;
+            require-prior-idle-ms = <125>;
         };
 
+
         combo_left {
-	        timeout-ms = <50>;
+	        timeout-ms = <80>;
 	        key-positions = <16 17>;
 	        bindings = <&kp LEFT>;
+			require-prior-idle-ms = <125>;
+
 	    };
 
         combo_right {
-	        timeout-ms = <50>;
+	        timeout-ms = <80>;
 	        key-positions = <17 18>;
 	        bindings = <&kp RIGHT>;
+			require-prior-idle-ms = <125>;
+
 	    };
 
         combo_enter {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <26 27>;
             bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_bt_sys {
             timeout-ms = <200>;
             key-positions = <31 32>;
             bindings = <&mo 5>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_fn_layer {
-	        timeout-ms = <50>;
+	        timeout-ms = <80>;
 	        key-positions = <3 4>;
 	        bindings = <&mo 4>;
+			require-prior-idle-ms = <125>;
+
         };
 
         combo_gaming {
@@ -97,57 +112,73 @@
         };
 
         combo_backspace {
-            timeout-ms = <70>;
+            timeout-ms = <80>;
             key-positions = <8 9>;
             bindings = <&kp BACKSPACE>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_backspace_hr {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 19>;
             bindings = <&kp BACKSPACE>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_tab {
             timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
+            require-prior-idle-ms = <125>;
         };
 
         combo_copy {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <11 2>;
             bindings = <&kp LG(C)>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_paste {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <13 2>;
             bindings = <&kp LG(V)>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_undo {
             timeout-ms = <60>;
             key-positions = <1 2>;
             bindings = <&kp LG(DE_Z)>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_redo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <2 3>;
             bindings = <&kp LG(LS(DE_Z))>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_del {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <28 29>;
             bindings = <&kp DEL>;
+            require-prior-idle-ms = <125>;
+
         };
 
         combo_euro {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <20 21>;
             bindings = <&kp DE_EURO>;
+            require-prior-idle-ms = <125>;
+
         };
 
 };
@@ -198,7 +229,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
+            require-prior-idle-ms = <100>;
             quick_tap_ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -228,7 +260,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&to>;
         };
 
