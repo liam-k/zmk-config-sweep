@@ -72,11 +72,32 @@
         combo_bt_sys {
             timeout-ms = <200>;
             key-positions = <31 32>;
-            bindings = <&mo 3>;
+            bindings = <&mo 5>;
+        };
+
+        combo_fn_layer {
+	        timeout-ms = <50>;
+	        key-positions = <3 4>;
+	        bindings = <&mo 4>;
+        }
+
+        combo_gaming {
+            timeout-ms = <200>;
+            require-prior-idle-ms = <250>
+            key-positions = <24 25>;
+            bindings = <&tog 3>;
+            layers = <1 3>;
+        };
+
+        combo_default {
+            timeout-ms = <200>;
+            require-prior-idle-ms = <250>
+            key-positions = <0 9>;
+            bindings = <&to 1>
         };
 
         combo_backspace {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             key-positions = <8 9>;
             bindings = <&kp BACKSPACE>;
         };
@@ -93,8 +114,20 @@
             bindings = <&kp TAB>;
         };
 
-        combo_undo {
+        combo_copy {
             timeout-ms = <50>;
+            key-positions = <11 2>;
+            bindings = <&kp LG(C)>;
+        };
+
+        combo_paste {
+            timeoutd-ms = <50>;
+            key-positions = <13 2>;
+            bindings = <&kp LG(V)>;
+        };
+
+        combo_undo {
+            timeout-ms = <60>;
             key-positions = <1 2>;
             bindings = <&kp LG(DE_Z)>;
         };
@@ -111,6 +144,12 @@
             bindings = <&kp DEL>;
         };
 
+        combo_euro {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp DE_EURO>;
+        };
+
 };
 
     behaviors {
@@ -119,7 +158,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <150>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -160,7 +199,7 @@
             label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick_tap_ms = <50>;
+            quick_tap_ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -173,6 +212,16 @@
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
+        };
+
+        mlt: mom_layertap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOMENT_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
         };
 
         mo_to: behavior_mo_to {
@@ -196,10 +245,10 @@
 
         default_layer {
             bindings = <
-&td DE_FSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT U 		 	 &td DE_CARET DE_UDIA   			&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK H      &td DE_EQL L            &td DE_SS DE_Z
-&kp C 				&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			 &td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  		&hm RIGHT_CONTROL N  	&td F DE_COLN
+&td DE_BSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT U 		 	 &td DE_CARET DE_UDIA   			&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK H      &td DE_EQL L            &td DE_AMPS DE_Z
+&td DE_FSLH C		&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			 &td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  		&hm RIGHT_CONTROL N  	&td DE_COLN F
 &td DE_HASH X  		&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD DE_COMM  	 &td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &td DE_SEMI J
-                                          								&blt 2 SPACE    		 &sk LEFT_SHIFT   	 				&mo_to 1 1 					&blt 2 S
+                                        								&mlt 2 SPACE    		 &sk LEFT_SHIFT   	 				&mo_to 2 1 					&td DE_SS S
               >;
           };
 
@@ -215,12 +264,36 @@
         num_nav_layer {
 
             bindings = <
-&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&td LA(UP) UP			&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	     	 		  	&hm HOME PAGE_UP  	&td DE_LPAR N7      &kp N8    		&td DE_RPAR N9     		 &kp BACKSPACE
-&kp LA(LEFT)  				&td DE_LBRC LEFT 		&td LA(DOWN) DOWN      	&td DE_RBRC RIGHT     	&kp LA(RIGHT)     								&hm END PAGE_DOWN   &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &kp DE_EQL
-&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        		      			&td DE_STAR DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &td DE_FSLH DE_MINS
-												 							&to 0 					&hm F6 C_VOICE_COMMAND   						&to 0  		 		&kp N0
+&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp  UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm HOME PAGE_UP  	&td DE_LPAR N7      &kp N8    		&td DE_RPAR N9     		 &kp BACKSPACE
+&kp LA(LEFT)  				&hm DE_LBRC LEFT 		&kp DOWN      			&hm DE_RBRC RIGHT     	&kp LA(RIGHT)     				&hm END PAGE_DOWN   &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &kp DE_EQL
+&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_STAR DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &td DE_FSLH DE_MINS
+												 							&to 0 					&hm F6 C_VOICE_COMMAND   		&to 0  		 		&kp N0
             >;
         };
+
+
+gaming_qwertz {
+    bindings = <
+    // ╭──────────────────┬───────────┬───────────┬────────────┬────────────╮ ╭───────────┬─────────────┬─────────────┬────────────┬────────────╮
+         &kp TAB    		 &kp Q       &kp W       &kp E        &kp R          &kp T     	&kp DE_Z       &kp T       &kp U      	&kp I
+    // ├──────────────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼─────────────┼────────────┼────────────┤
+         &kp LEFT_SHIFT 	&kp A       &kp S       &kp D        &kp F          &kp N1      &kp N2        &kp N3        &kp N4       &kp N5
+    // ├──────────────────┼───────────┼───────────┼────────────┼────────────┤ ├───────────┼─────────────┼─────────────┼────────────┼────────────┤
+         &kp LEFT_CONTROL   &kp DE_Y       &kp X       &kp C        &kp V        &kp N6      &kp N7        &kp N8        &kp N9       &kp N0
+    // ╰──────────────────┴───────────┴───────────┼────────────┼────────────┤ ├───────────┼─────────────┼─────────────┴────────────┴────────────╯
+                                             &kp SPACE    &kp RET        &kp ESC      &kp M
+    //                                     ╰────────────┴────────────╯ ╰───────────┴─────────────╯
+    >;
+};
+
+function_keys {
+    bindings = <
+         &trans    		&trans       &trans  	    &trans      &trans         	&trans  	 &kp F7       &kp F8        &kp F9      &kp F12
+         &trans 		&trans       &trans     	&trans   	&trans        	&trans       &kp F4    	  &kp F5        &kp F6 	&kp F11
+         &trans 		&trans 	     &trans     	&trans   	&trans    	 	&trans       &kp F1       &kp F2        &kp F3      &kp F10
+                               	             &kp SPACE  &sk LEFT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT
+    >;
+};
 
         bt_sys {
             bindings = <
