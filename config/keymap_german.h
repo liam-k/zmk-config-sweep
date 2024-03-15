@@ -153,7 +153,7 @@
 #define DE_RBRC RA(DE_9)    // }
 #define DE_BSLH RA(RS(DE_7))   // (backslash)
 // Row 2
-#define DE_AT   RA(DE_Q)    // @
+#define DE_AT   RA(DE_L)    // @
 #define DE_EURO RA(DE_E)    // €
 #define DE_TILD LA(DE_N) //~
 // Row 4
