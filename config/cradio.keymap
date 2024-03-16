@@ -275,12 +275,10 @@
 	       compatible = "zmk,behavior-hold-tap";
 	       label = "MT_CAPS_WORD_STICKY_SHIFT";
 	       #binding-cells = <2>;
-	       tapping-term-ms = <200>;  // Adjust this value to your preference
+	       tapping-term-ms = <200>;
 	       flavor = "tap-preferred";
 	       bindings = <&caps_word>, <&sk>;
-   };
-
-
+   		};
     };
 
     keymap {
