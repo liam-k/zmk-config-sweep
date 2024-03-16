@@ -297,21 +297,21 @@
 			    mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-	 	rbkt_rbrc: shift_long_tap {
+	 	rbkt_rbrc: rbkt_rbrc {
 	            compatible = "zmk,behavior-mod-morph";
            		#binding-cells = <0>;
 			    bindings = <&kp DE_RBKT>, <&kp DE_RBRC>;
 			    mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-	 	labk_lpar: shift_long_tap {
+	 	labk_lpar: labk_lpar {
 	            compatible = "zmk,behavior-mod-morph";
            		#binding-cells = <0>;
 			    bindings = <&kp DE_LABK>, <&kp DE_LPAR>;
 			    mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-	 	rabk_rpar: shift_long_tap {
+	 	rabk_rpar: rabk_rpar {
 	            compatible = "zmk,behavior-mod-morph";
            		#binding-cells = <0>;
 			    bindings = <&kp DE_RABK>, <&kp DE_RPAR>;
