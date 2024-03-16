@@ -289,6 +289,13 @@
 			    bindings = <&kp DE_FSLH>, <&kp DE_BSLH>;
 			    mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
+
+	 	shift_long_tap: shift_long_tap {
+	            compatible = "zmk,behavior-mod-morph";
+           		#binding-cells = <2>;
+			    bindings = <&kp>, <&kp>;
+			    mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
     };
 
     keymap {
@@ -296,10 +303,10 @@
 
         default_layer {
             bindings = <
-&kp K    					&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT DE_COMM    	&td DE_CARET DE_UDIA   				&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK C     &td DE_EQL L            &td DE_AMPS DE_Z
-&td &fb_slsh H				&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			&td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  	   &hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
-&td DE_HASH X  				&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD U  	 		&td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &kp J
-                                        								&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&td DE_SS S
+&kp K    					&td DE_UNDS DE_DOT        	&td SHIFT_LONG_TAP(DE_LBKT DE_LBRC) O        	&td SHIFT_LONG_TAP(DE_RBKT DE_RBRC) DE_COMM    	&td DE_CARET DE_UDIA   		&td DE_EXCL V 		&td MAC_LABK G     &td MAC_RABK C    		 &td DE_EQL L            &td DE_AMPS DE_Z
+&td &fb_slsh H				&hm LEFT_CONTROL A  		&hm LALT E   									&hm LGUI I  									&td DE_STAR DE_Y     		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  	   &hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
+&td DE_HASH X  				&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   							&td DE_TILD U  	 								&td DE_GRV DE_ODIA  		&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &kp J
+                                        																									&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&td DE_SS S
               >;
           };
 
