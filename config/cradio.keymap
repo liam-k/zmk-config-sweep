@@ -138,7 +138,13 @@
             key-positions = <11 2>;
             bindings = <&kp LG(C)>;
             require-prior-idle-ms = <150>;
+        };
 
+        combo_cut {
+            timeout-ms = <80>;
+            key-positions = <10 2>;
+            bindings = <&kp LG(C)>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_paste {
@@ -200,20 +206,12 @@
             label = "HOMEROW_SHIFTS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
+            require-prior-idle-ms = <125>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
 
-        hsl: homerow_shifts_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS_LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&to>;
-        };
 
         hthl: homerow_tap_hold_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -250,9 +248,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOMENT_LAYER_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <150>;
-            require-prior-idle-ms = <200>;
+            tapping-term-ms = <180>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
@@ -279,6 +276,23 @@
 	       flavor = "tap-preferred";
 	       bindings = <&caps_word>, <&sk>;
    		};
+
+		 smart_shift: smart_shift {
+	            compatible = "zmk,behavior-mod-morph";
+           		#binding-cells = <0>;
+			    bindings = <&sk LSHFT>, <&caps_word>;
+			    mods = <(MOD_LSFT)>;
+		};
+
+	 	fb_slsh: for_back_slsh {
+	            compatible = "zmk,behavior-mod-morph";
+           		#binding-cells = <0>;
+			    bindings = <&kp DE_FSLH>, <&kp DE_BSLH>;
+			    mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+
+
     };
 
     keymap {
@@ -286,10 +300,10 @@
 
         default_layer {
             bindings = <
-&td DE_BSLH K    	&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT DE_COMM    	&td DE_CARET DE_UDIA   				&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK C     &td DE_EQL L            &td DE_AMPS DE_Z
-&td DE_FSLH H		&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			&td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  	   &hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
-&td DE_HASH X  		&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD U  	 		&td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &td DE_SEMI J
-                                        								&mlt 2 SPACE    		&mt_caps_word_sticky_shift 0 LEFT_SHIFT		&mo_to 2 2 					&td DE_SS S
+&kp K    					&td DE_UNDS DE_DOT        	&td DE_LBKT O        	&td DE_RBKT DE_COMM    	&td DE_CARET DE_UDIA   				&td DE_EXCL V 				&td MAC_LABK G    	&td MAC_RABK C     &td DE_EQL L            &td DE_AMPS DE_Z
+&td &for_back_slsh H		&hm LEFT_CONTROL A  		&hm LALT E   			&hm LGUI I  			&td DE_STAR DE_Y     	  	 		&td DE_QUES B 	 			&hm RGUI T	  		&hm RALT R  	   &hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
+&td DE_HASH X  				&td DE_DLR Q               	&td MAC_PIPE DE_ADIA   	&td DE_TILD U  	 		&td DE_GRV DE_ODIA  				&td DE_PLUS P 		 		&td DE_PERC D       &td DE_DQT W       &td DE_SQT M             &kp J
+                                        								&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&td DE_SS S
               >;
           };
 
@@ -306,8 +320,8 @@
 
             bindings = <
 &td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp  UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm HOME TAB  		  	&td DE_LPAR N7      &td DE_RPAR N8  &td DE_EQL N9     		 &kp BACKSPACE
-&kp LA(LEFT)  				&hm DE_LBRC LEFT 		&kp DOWN      			&hm DE_RBRC RIGHT     	&kp LA(RIGHT)     				&hm END DE_STAR    		&hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
-&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_MINS DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
+&kp LA(LEFT)  				&hm DE_LBRC LEFT 		&kp DOWN      			&hm DE_RBRC RIGHT     	&kp LA(RIGHT)     				&hm END DE_PLUS    		&hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
+&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_PLUS DE_STAR		&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
 												 							&to 0 					&hm F6 C_VOICE_COMMAND   		&to 0  		 		&kp N0
             >;
         };
