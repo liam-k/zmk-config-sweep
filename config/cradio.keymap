@@ -290,7 +290,7 @@
 			    mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-	 	lbkt_lbrc: shift_long_tap {
+	 	lbkt_lbrc: lbkt_lbrc {
 	            compatible = "zmk,behavior-mod-morph";
            		#binding-cells = <0>;
 			    bindings = <&kp DE_LBKT>, <&kp DE_LBRC>;
