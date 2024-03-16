@@ -309,7 +309,7 @@
             bindings = <
 &td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp  UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm HOME TAB  		  	&td DE_LPAR N7      &td DE_RPAR N8  &td DE_EQL N9     		 &kp BACKSPACE
 &kp LA(LEFT)  				&hm DE_LBRC LEFT 		&kp DOWN      			&hm DE_RBRC RIGHT     	&kp LA(RIGHT)     				&hm END DE_STAR    		&hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
-&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_MINUS DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kd DE_FSLH
+&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_MINUS DE_PLUS	&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
 												 							&to 0 					&hm F6 C_VOICE_COMMAND   		&to 0  		 		&kp N0
             >;
         };
