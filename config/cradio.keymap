@@ -308,8 +308,8 @@
         num_nav_layer {
 
             bindings = <
-&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm MAC_RABK TAB  		&td DE_LBRC N7      &td DE_RBRC N8  &td DE_EQL N9     		 &kp BACKSPACE
-&kp LA(LEFT)  				&hm LEFT_CONTROL LEFT 	&kp DOWN      			&hm LGUI RIGHT     		&kp LA(RIGHT)     				&hm MAC_LABK DE_PLUS    &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
+&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm MAC_LABK TAB  		&td DE_LBRC N7      &td DE_RBRC N8  &td DE_EQL N9     		 &kp BACKSPACE
+&kp LA(LEFT)  				&hm LEFT_CONTROL LEFT 	&kp DOWN      			&hm LGUI RIGHT     		&kp LA(RIGHT)     				&hm MAC_RABK DE_PLUS    &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
 &kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_PLUS DE_STAR		&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
 												 							&hm LGUI SPACE 			&hm F6 C_VOICE_COMMAND   		&to 0  		 			&kp N0
             >;
