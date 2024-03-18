@@ -99,7 +99,7 @@
                     require-prior-idle-ms = <250>;
                     key-positions = <24 25>;
                     bindings = <&tog 3>;
-                    layers = <1 3>;
+                    layers = <0 1 2 3>;
                 };
 
                 combo_default {
