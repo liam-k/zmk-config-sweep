@@ -20,7 +20,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        		combo_esc {
                 timeout-ms = <50>;
                     key-positions = <22 23>;
                     bindings = <&kp ESC>;
@@ -80,7 +80,7 @@
                 };
 
                 combo_bt_sys {
-                timeout-ms = <50>;
+                	timeout-ms = <50>;
                     key-positions = <31 32>;
                     bindings = <&mo 5>;
                     require-prior-idle-ms = <180>;
@@ -92,7 +92,6 @@
                  key-positions = <3 4>;
                  bindings = <&mo 4>;
                  require-prior-idle-ms = <180>;
-
                 };
 
                 combo_gaming {
@@ -122,9 +121,9 @@
                     key-positions = <8 9>;
                     bindings = <&kp BACKSPACE>;
                     require-prior-idle-ms = <180>;
-                }
+                };
 
-                combo_delete_line {
+                cmbo_delete_line {
                     timeout-ms = <70>;
                     key-positions = <8 9>;
                     bindings = <&kp LGUI(BACKSPACE)>;
@@ -132,11 +131,10 @@
                 };
 
                 combo_backspace_hr {
-                timeout-ms = <50>;
+                	timeout-ms = <50>;
                     key-positions = <18 19>;
                     bindings = <&kp BACKSPACE>;
                     require-prior-idle-ms = <180>;
-
                 };
 
                 combo_tab {
@@ -147,21 +145,21 @@
                 };
 
                 combo_copy {
-                timeout-ms = <50>;
+                	timeout-ms = <50>;
                     key-positions = <11 2>;
                     bindings = <&kp LG(C)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_cut {
-                timeout-ms = <50>;
+                	timeout-ms = <50>;
                     key-positions = <10 2>;
                     bindings = <&kp LG(X)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_paste {
-                 timeout-ms = <50>;
+                	 timeout-ms = <50>;
                     key-positions = <13 2>;
                     bindings = <&kp LG(V)>;
                     require-prior-idle-ms = <180>;
@@ -169,7 +167,7 @@
                 };
 
                 combo_undo {
-                 timeout-ms = <50>;
+                 	timeout-ms = <50>;
                     key-positions = <1 2>;
                     bindings = <&kp LG(DE_Z)>;
                     require-prior-idle-ms = <180>;
