@@ -314,8 +314,7 @@
                                                         	 			&to 0       &smart_shift    	 &to 0      	 &to 0
             >;
         };
-
-        num_nav_layer {------
+        num_nav_layer {
             bindings = <
 &td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm MAC_LABK TAB  		&td DE_LBRC N7      &td DE_RBRC N8  &td DE_EQL N9     		 &kp BACKSPACE
 &kp LA(LEFT)  				&hm LEFT_CONTROL LEFT 	&hm LALT DOWN      		&hm LGUI RIGHT     		&kp LA(RIGHT)     				&hm MAC_RABK DE_PLUS    &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
