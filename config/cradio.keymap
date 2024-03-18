@@ -125,7 +125,7 @@
 
                 cmbo_delete_line {
                     timeout-ms = <70>;
-                    key-positions = <8 9>;
+                    key-positions = <7 8 9>;
                     bindings = <&kp LGUI(BACKSPACE)>;
                     require-prior-idle-ms = <180>;
                 };
