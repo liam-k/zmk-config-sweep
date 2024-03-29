@@ -124,13 +124,6 @@
                     require-prior-idle-ms = <180>;
                 };
 
-                cmbo_delete_line {
-                    timeout-ms = <70>;
-                    key-positions = <7 8 9>;
-                    bindings = <&kp LGUI(BACKSPACE)>;
-                    require-prior-idle-ms = <180>;
-                };
-
                 combo_backspace_hr {
                 	timeout-ms = <50>;
                     key-positions = <18 19>;
@@ -164,7 +157,6 @@
                     key-positions = <13 2>;
                     bindings = <&kp LG(V)>;
                     require-prior-idle-ms = <180>;
-
                 };
 
                 combo_undo {
@@ -187,7 +179,6 @@
                     key-positions = <28 29>;
                     bindings = <&kp DEL>;
                     require-prior-idle-ms = <180>;
-
                 };
 
                 combo_euro {
@@ -195,7 +186,6 @@
                     key-positions = <20 21>;
                     bindings = <&kp DE_EURO>;
                     require-prior-idle-ms = <180>;
-
                 };
 
 };
@@ -301,9 +291,9 @@
         default_layer {
             bindings = <
 &td DE_BSLH K    		&td DE_UNDS DE_DOT     	&td DE_LBKT O        		&td DE_RBKT DE_COMM    		&td DE_CARET DE_UDIA   					&td DE_EXCL V 		&td DE_LPAR G  				&td DE_RPAR C    	&td DE_EQL L           	&td DE_SS DE_Z
-&td DE_FSLH H			&hm LEFT_CONTROL A  	&hm LALT E   				&hm LGUI I  					&td DE_STAR DE_Y     				&td DE_QUES B 	 	&hm RGUI T	  				&hm RALT R  	  	&hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
+&hm LEFT_SHIFT H			&hm LEFT_CONTROL A  	&hm LALT E   				&hm LGUI I  					&td DE_STAR DE_Y     				&td DE_QUES B 	 	&hm RGUI T	  				&hm RALT R  	  	&hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
 &td DE_HASH X  			&td DE_DLR Q           	&td MAC_PIPE DE_ADIA   		&td DE_TILD U  	 				&td DE_GRV DE_ODIA  				&td DE_PLUS P 		&td DE_PERC D       		&td DE_DQT W       	&td DE_SQT M            &td DE_AMPS J
-                                        																	&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&mlt 2 S
+															&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&mlt 2 S
               >;
           };
 
@@ -317,9 +307,9 @@
         };
         num_nav_layer {
             bindings = <
-&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&hm MAC_LABK TAB  		&td DE_LBRC N7      &td DE_RBRC N8  &td DE_EQL N9     		 &kp BACKSPACE
-&kp LA(LEFT)  				&hm LEFT_CONTROL LEFT 	&hm LALT DOWN      		&hm LGUI RIGHT     		&kp LA(RIGHT)     				&hm MAC_RABK DE_PLUS    &hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_AT DE_MINS
-&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_MINS DE_STAR		&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
+&td C_PREV LG(LA(LEFT))  	&kp LA(LG(DOWN)) 		&kp UP					&kp LA(LG(UP))     		&td C_NEXT LG(LA(RIGHT)) 	   	&td DE_AT DEL  			&td DE_LBRC N7      &td DE_RBRC N8  &td DE_EQL N9     		 &kp BACKSPACE
+&kp LA(LEFT)  				&hm LEFT_CONTROL LEFT 	&hm LALT DOWN      		&hm LGUI RIGHT     		&kp LA(RIGHT)     				&td DE_STAR MAC_LABK	&hm RGUI N4  		&hm RALT N5  	&hm RIGHT_CONTROL N6     &td DE_FSLH MAC_RABK
+&kp LA(LS(LEFT))   			&kp LS(LEFT)    		&hm C_PP LA(LG(SPACE)) 	&kp LS(RIGHT) 	   		&kp LA(LS(RIGHT))        	 	&td DE_PLUS DE_MINS		&td DE_DOT N1  		&td N0 N2   	&td DE_COMM N3  		 &kp DE_FSLH
 												 							&lt 0 SPACE 			&smart_shift  					&to 0  		 			&kp N0
             >;
         };
