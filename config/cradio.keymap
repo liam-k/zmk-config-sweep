@@ -298,7 +298,7 @@
         default_layer {
             bindings = <
 &td DE_BSLH K    		&td DE_UNDS DE_DOT     	&td DE_LBKT O        		&td DE_RBKT DE_COMM    		&td DE_CARET DE_UDIA   					&td DE_EXCL V 		&td DE_LPAR G  				&td DE_RPAR C    	&td DE_EQL L           	&td DE_SS DE_Z
-&hm LEFT_SHIFT H			&hm LEFT_CONTROL A  	ts&hm LALT E   				&hm LGUI I  					&td DE_STAR DE_Y     			&td DE_QUES B 	 	&hm RGUI T	  				&hm RALT R  	  	&hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
+&hm LEFT_SHIFT H			&hm LEFT_CONTROL A  &hm LALT E   				&hm LGUI I  					&td DE_STAR DE_Y     			&td DE_QUES B 	 	&hm RGUI T	  				&hm RALT R  	  	&hm RIGHT_CONTROL N  	&hm RIGHT_SHIFT F
 &td DE_HASH X  			&td DE_DLR Q           	&td MAC_PIPE DE_ADIA   		&td DE_TILD U  	 				&td DE_GRV DE_ODIA  				&td DE_PLUS P 		&td DE_PERC D       		&td DE_DQT W       	&td DE_SQT M            &td DE_AMPS J
 															&mlt 2 SPACE    		&smart_shift		&mo_to 2 2 					&mlt 2 S
               >;
