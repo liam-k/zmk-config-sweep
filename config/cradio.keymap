@@ -73,14 +73,14 @@
              };
 
                 combo_enter {
-                	timeout-ms = <75>;
+                timeout-ms = <65>;
                  	key-positions = <26 27>;
                     bindings = <&kp RET>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_bt_sys {
-                	timeout-ms = <75>;
+                timeout-ms = <65>;
                     key-positions = <31 32>;
                     bindings = <&mo 5>;
                     require-prior-idle-ms = <180>;
@@ -88,14 +88,14 @@
                 };
 
                 combo_fn_layer {
-                timeout-ms = <75>;
+                timeout-ms = <65>;
                  key-positions = <3 4>;
                  bindings = <&mo 4>;
                  require-prior-idle-ms = <180>;
                 };
 
                 combo_gaming {
-                	timeout-ms = <75>;
+                timeout-ms = <65>;
                     require-prior-idle-ms = <250>;
                     key-positions = <24 25>;
                     bindings = <&tog 3>;
@@ -103,14 +103,14 @@
                 };
 
                 combo_default {
-                	timeout-ms = <75>;
+                timeout-ms = <65>;
                     require-prior-idle-ms = <250>;
                     key-positions = <4 5>;
                     bindings = <&to 0>;
                 };
 
                 combo_num_nav {
-                	timeout-ms = <75>;
+                timeout-ms = <65>;
                     require-prior-idle-ms = <250>;
                     key-positions = <14 15>;
                     bindings = <&to 2>;
@@ -118,63 +118,70 @@
                 };
 
                 combo_backspace {
-                    timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <8 9>;
                     bindings = <&kp BACKSPACE>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_backspace_hr {
-                	timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <18 19>;
                     bindings = <&kp BACKSPACE>;
                     require-prior-idle-ms = <180>;
                 };
 
         		combo_backspc_left {
-                timeout-ms = <80>;
+	                	timeout-ms = <65>;
                     key-positions = <21 22>;
                     bindings = <&kp BACKSPACE>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_tab {
-                    timeout-ms = <75>;
+            				timeout-ms = <65>;
                     key-positions = <11 12>;
                     bindings = <&kp TAB>;
                     require-prior-idle-ms = <180>;
                 };
 
+                combo_shift_tab {
+            				timeout-ms = <65>;
+                    key-positions = <10 11>;
+                    bindings = <&kp LS(TAB)>;
+                    require-prior-idle-ms = <180>;
+                };
+
                 combo_copy {
-                	timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <11 2>;
                     bindings = <&kp LG(C)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_cut {
-                	timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <10 2>;
                     bindings = <&kp LG(X)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_paste {
-                	timeout-ms = <75>;
+                	timeout-ms = <65>;
                     key-positions = <13 2>;
                     bindings = <&kp LG(V)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_undo {
-                 	timeout-ms = <70>;
+                	timeout-ms = <65>;
                     key-positions = <1 2>;
                     bindings = <&kp LG(DE_Z)>;
                     require-prior-idle-ms = <180>;
                 };
 
                 combo_redo {
-                    timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <2 3>;
                     bindings = <&kp LG(LS(DE_Z))>;
                     require-prior-idle-ms = <180>;
@@ -182,16 +189,9 @@
                 };
 
                 combo_del {
-                    timeout-ms = <75>;
+	                	timeout-ms = <65>;
                     key-positions = <28 29>;
                     bindings = <&kp DEL>;
-                    require-prior-idle-ms = <180>;
-                };
-
-                combo_euro {
-                    timeout-ms = <75>;
-                    key-positions = <20 21>;
-                    bindings = <&kp DE_EURO>;
                     require-prior-idle-ms = <180>;
                 };
 
@@ -300,7 +300,7 @@
 &td DE_BSLH K    		&td DE_UNDS DE_DOT     	&td DE_LBKT O        		&td DE_RBKT DE_COMM    		&td DE_CARET DE_UDIA   					&td DE_EXCL V 		&td DE_LPAR G  				&td DE_RPAR C    	&td DE_EQL L           	&td DE_SS DE_Z
 &hm LEFT_SHIFT H			&hm LEFT_CONTROL A  &hm LALT E   				&hm LGUI I  					&td DE_STAR DE_Y     			&td DE_QUES B 	 	&hm RGUI T	  				&hm RALT R  	  	&hm RIGHT_CONTROL N  	&td DE_COLN F
 &td DE_HASH X  	&td MAC_PIPE Q  &td DE_DLR  DE_ADIA   		&td DE_TILD U  	 				&td DE_GRV DE_ODIA  				&td DE_PLUS P 		&td DE_PERC D       		&td DE_DQT W       	&td DE_SQT M            &td DE_AMPS J
-															&mlt 2 SPACE    		&smart_shift		&mlt 4 RET 					&mlt 1 S
+															&mlt 2 SPACE    		&smart_shift		&mo_to 1 1 					&mlt 4 S
               >;
           };
 
